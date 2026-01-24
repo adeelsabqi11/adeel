@@ -1,10 +1,10 @@
-<!-- ₹REE WA BOT | Modern Profile README  -->
+<!-- ᗩᗪᗴᗴᒪ ᗰIᑎI ᗷOT | ᗪᗴᐯ ᗰᗩᖴIᗩ ᗩᗪᗴᗴᒪ  -->
 
 <p align="center">
-  <img src="https://files.catbox.moe/sb24ud.jpg" alt="FREE SC WA BOT Banner" width="100%">
+  <img src="https://files.catbox.moe/1bho69.jpg" alt="WA BOT Banner" width="100%">
 </p>
 
-<h1 align="center">Hi 👋, I'm Malvin King</h1>
+<h1 align="center">ᕼI 👋, I,ᗰ ᗩᗪᗴᗴᒪ </h1>
 <h3 align="center">💻 Passionate Developer | Exploring the Boundless World of Technology 🌍</h3>
 
 <p align="center">
