@@ -26,27 +26,27 @@ const {
 } = require('baileys');
 
 // ---------------- CONFIG ----------------
-const BOT_NAME_FREE = 'ғʀᴇᴇ-ᴍɪɴɪ';
+const BOT_NAME_FREE = 'ᴀᴅᴇᴇʟ xᴍᴅ';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
   AUTO_LIKE_STATUS: 'true',
-  AUTO_RECORDING: 'false',
+  AUTO_RECORDING: 'true',
   AUTO_LIKE_EMOJI: ['🎈','👀','❤️‍🔥','💗','😩','☘️','🗣️','🌸'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/Dh7gxX9AoVD8gsgWUkhB9r',
-  FREE_IMAGE: 'https://files.catbox.moe/es0f8r.jpg',
-  NEWSLETTER_JID: '120363402507750390@newsletter', // replace with your own newsletter its the main newsletter
+  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BhemgSVZDHfIVMFOEgn3D4',
+  FREE_IMAGE: 'https://files.catbox.moe/1bho69.jpg',
+  NEWSLETTER_JID: '120363407804667405@newsletter', // replace with your own newsletter its the main newsletter
   
   // ✅ SUPPORT/VALIDATION NEWSLETTER ( recommended) 
   // this will not affect anything..its just for supporting the dev channel
   // Users add this to show support and get updates
   // bro if u remove this you are one cursed human alive
   SUPPORT_NEWSLETTER: {
-    jid: '120363402507750390@newsletter',  // Your channel
+    jid: '120363407804667405@newsletter',  // Your channel
     emojis: ['❤️', '🌟', '🔥', '💯'],  // Support emojis
-    name: 'Malvin King Tech',
+    name: '𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ',
     description: 'Bot updates & support channel'
   },
   
@@ -54,14 +54,14 @@ const config = {
   DEFAULT_NEWSLETTERS: [
     // Your support newsletter first (as example)
     { 
-      jid: '120363420989526190@newsletter',  // Your channel
+      jid: '120363407804667405@newsletter',  // Your channel
       emojis: ['❤️', '🌟', '🔥', '💯'],
       name: 'FREE Tech', //your channel name or just desplay name
       description: 'Free Channel'
     },
     // Other popular newsletters if u have more
     { 
-      jid: '120363420989526190@newsletter', 
+      jid: '120363407804667405@newsletter', 
       emojis: ['🎵', '🎶', '📻'],
       name: 'Music Updates'
     }
@@ -70,19 +70,19 @@ const config = {
   
   OTP_EXPIRY: 300000,
   OWNER_NUMBER: process.env.OWNER_NUMBER || '263714757857',
-  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbB3YxTDJ6H15SKoBv3S',
-  BOT_NAME: 'ғʀᴇᴇ-ᴍɪɴɪ',
+  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBTLqgFsn0a8Y0myl3F',
+  BOT_NAME: 'ᴀᴅᴇᴇʟ xᴍᴅ',
   BOT_VERSION: '1.0.beta',
-  OWNER_NAME: 'ᴍʀ xᴅᴋɪɴɢ',
-  IMAGE_PATH: 'https://chat.whatsapp.com/Dh7gxX9AoVD8gsgWUkhB9r',
-  BOT_FOOTER: '> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍᴀʟᴠɪɴ ᴛᴇᴄʜ',
-  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/es0f8r.jpg' }
+  OWNER_NAME: '𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ',
+  IMAGE_PATH: 'https://chat.whatsapp.com/BhemgSVZDHfIVMFOEgn3D4',
+  BOT_FOOTER: '> 📌 ᴘᴏᴡᴇʀ ʙʏ ᴍᴀғɪᴀ ᴀᴅᴇᴇʟ',
+  BUTTON_IMAGES: { ALIVE: 'https://files.catbox.moe/1bho69.jpg' }
 };
 
 // ---------------- MONGO SETUP ----------------
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://malvintech11_db_user:0SBgxRy7WsQZ1KTq@cluster0.xqgaovj.mongodb.net/?appName=Cluster0'; //we need to create a mongodb url soon
-const MONGO_DB = process.env.MONGO_DB || 'Free_Mini';
+const MONGO_DB = process.env.MONGO_DB || 'ᴀᴅᴇᴇʟ xᴍᴅ';
 
 let mongoClient, mongoDB;
 let sessionsCol, numbersCol, adminsCol, newsletterCol, configsCol, newsletterReactsCol;
@@ -603,7 +603,7 @@ function setupCommandHandlers(socket, number) {
             },
             message: {
                 contactMessage: {
-                    displayName: "ғʀᴇᴇ ᴍɪɴɪ",
+                    displayName: "ᴀᴅᴇᴇʟ xᴍᴅ",
                     vcard: `BEGIN:VCARD
 VERSION:3.0
 N:Free;;;;
@@ -643,7 +643,7 @@ case 'menu': {
     const text = `
 ╭────────￫
 │  • ɴᴀᴍᴇ ${title}                        
-│  • ᴏᴡɴᴇʀ: ${config.OWNER_NAME || 'ᴍʀ xᴅᴋɪɴɢ'}            
+│  • ᴏᴡɴᴇʀ: ${config.OWNER_NAME || '𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ'}            
 │  • ᴠᴇʀsɪᴏɴ: ${config.BOT_VERSION || '0.1+'}             
 │  • ᴘʟᴀᴛғᴏʀᴍ: ${process.env.PLATFORM || 'Heroku'}           
 │  • ᴜᴘᴛɪᴍᴇ: ${hours}h ${minutes}m ${seconds}s                
@@ -666,7 +666,7 @@ case 'menu': {
       // ᴍᴏʀᴇ sᴏᴏɴ
     ];
 
-    const defaultImg = "https://files.catbox.moe/sb24ud.jpg";
+    const defaultImg = "https://files.catbox.moe/1bho69.jpg";
     const useLogo = userCfg.logo || defaultImg;
 
     // build image payload (url or buffer)
@@ -679,7 +679,7 @@ case 'menu': {
     await socket.sendMessage(sender, {
       image: imagePayload,
       caption: text,
-      footer: "*▶ ● 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 *",
+      footer: "*▶ ● 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 ᴀᴅᴇᴇʟ xᴍᴅ *",
       buttons,
       headerType: 4
     }, { quoted: fakevcard });
@@ -697,7 +697,7 @@ case 'ping': {
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     const cfg = await loadUserConfigFromMongo(sanitized) || {};
     const botName = cfg.botName || BOT_NAME_FANCY;
-    const logo = cfg.logo || "https://files.catbox.moe/sb24ud.jpg ";
+    const logo = cfg.logo || "https://files.catbox.moe/1bho69.jpg ";
 
     const latency = Date.now() - (msg.messageTimestamp * 1000 || Date.now());
 
@@ -714,7 +714,7 @@ case 'ping': {
       image: imagePayload,
       caption: text,
       footer: `*${botName} ᴘɪɴɢ*`,
-      buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "📜 ᴍᴇɴᴜ" }, type: 1 }],
+      buttons: [{ buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "👑 ᴍᴇɴᴜ" }, type: 1 }],
       headerType: 4
     }, { quoted: fakevcard });
 
@@ -737,18 +737,18 @@ case 'owner': {
 
  \`👑 𝐎𝐖𝐍𝐄𝐑 𝐈𝐍𝐅𝐎 👑\`
 
-╭─ 🧑‍💼 𝐃𝐄𝐓𝐀𝐈𝐋𝐒
+╭─ 🧑‍💼 𝐃𝐄𝐓𝐀𝐈𝐋𝐒─✧
 │
-│ ✦ 𝐍𝐚𝐦𝐞 : ᴍʀ xᴅᴋɪɴɢ
-│ ✦ 𝐀𝐠𝐞  : 20+
-│ ✦ 𝐍𝐨.  : +263714757857
+│ ✦ ᑎᗩᗰᗴ : 𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ
+│ ✦ ᗩᘜᗴ  : 20+
+│ ✦ ᑎO.  : 923174838990
 │
-╰────────✧
+╰─────────✧
 
 `.trim();
 
     const buttons = [
-      { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "📜 ᴍᴇɴᴜ" }, type: 1 },
+      { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: "👑 ᴍᴇɴᴜ" }, type: 1 },
       
     ];
 
@@ -1009,7 +1009,7 @@ async function EmpirePair(number, res) {
 
         } catch (e) { 
           console.error('Connection open error:', e); 
-          try { exec(`pm2.restart ${process.env.PM2_NAME || 'SENU-MINI-main'}`); } catch(e) { console.error('pm2 restart failed', e); }
+          try { exec(`pm2.restart ${process.env.PM2_NAME || 'ADEEL-MINI-main'}`); } catch(e) { console.error('pm2 restart failed', e); }
         }
       }
       if (connection === 'close') {
@@ -1281,7 +1281,7 @@ process.on('exit', () => {
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught exception:', err);
-  try { exec(`pm2.restart ${process.env.PM2_NAME || '© ▶ 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 '}`); } catch(e) { console.error('Failed to restart pm2:', e); }
+  try { exec(`pm2.restart ${process.env.PM2_NAME || '▶ 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 ᴀᴅᴇᴇʟ xᴍᴅ'}`); } catch(e) { console.error('Failed to restart pm2:', e); }
 });
 
 
@@ -1291,5 +1291,6 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
 
