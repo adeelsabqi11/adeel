@@ -12,10 +12,10 @@ module.exports = {
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
     NEWS_JSON_URL: '',
-    BOT_NAME: 'ᗩᗪᗴᗴᒪ ᙭ᗰᗪ',
+    BOT_NAME: 'ᗩᗪᗴᗴᒪ-᙭ᗰᗪ',
     OWNER_NAME: '𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ',
     OWNER_NUMBER: '923174838990',
-    BOT_VERSION: '1.0.1',
+    BOT_VERSION: '1.0.2',
     BOT_FOOTER: '> 📌 ᴘᴏᴡᴇʀ ʙʏ ᴍᴀғɪᴀ ᴀᴅᴇᴇʟ',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbC15ycFHWpubqmNWe0N',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VavP4nX0G0XggHzhVg0R',
 };
