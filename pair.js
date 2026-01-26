@@ -26,7 +26,7 @@ const {
 } = require('baileys');
 
 // ---------------- CONFIG ----------------
-const BOT_NAME_FREE = '𝐀𝐃𝐄𝐄𝐋 𝐗𝐌𝐃';
+const BOT_NAME_FREE = 'ᗩᗪᗴᗴᒪ ᙭ᗰᗪ';
 
 const config = {
   AUTO_VIEW_STATUS: 'true',
@@ -71,7 +71,7 @@ const config = {
   OTP_EXPIRY: 300000,
   OWNER_NUMBER: process.env.OWNER_NUMBER || '923174838990',
   CHANNEL_LINK: 'https://whatsapp.com/channel/0029VavP4nX0G0XggHzhVg0R',
-  BOT_NAME: '𝐀𝐃𝐄𝐄𝐋 𝐗𝐌𝐃',
+  BOT_NAME: 'ᗩᗪᗴᗴᒪ ᙭ᗰᗪ',
   BOT_VERSION: '1.0.2',
   OWNER_NAME: '𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ',
   IMAGE_PATH: 'https://files.catbox.moe/1bho69.jpg',
@@ -662,6 +662,8 @@ case 'menu': {
 
 🎯 ᴛᴀᴘ ᴀ ᴄᴀᴛᴇɢᴏʀʏ ʙᴇʟᴏᴡ!
 
+🧩 ᴊUST PAIR AUTO CONNECT BOT LINK
+
 `.trim();
 
     const buttons = [
@@ -669,7 +671,7 @@ case 'menu': {
        type: 1 },
       { buttonId: `${config.PREFIX}download`, buttonText: { displayText: "📥 ᴅᴏᴡɴʟᴏᴀᴅ" }, type: 1 },
       { buttonId: `${config.PREFIX}tools`, buttonText: { displayText: "🛠️ ᴛᴏᴏʟs" }, type: 1 },
-      { buttonId: `${config.PREFIX}sᴇᴛᴛɪɴɢs`, buttonText: { displayText: "⚙️ 𝘚𝘦𝘵𝘵𝘪𝘯𝘨𝘴" }, type: 1 },
+      { buttonId: `${config.PREFIX}sᴇᴛᴛɪɴɢs`, buttonText: { displayText: "⚙️ sᴇᴛᴛɪɴɢs" }, type: 1 },
       { buttonId: `${config.PREFIX}creative`, buttonText: { displayText: "🎨 ᴄʀᴇᴀᴛɪᴠᴇ" }, type: 1 },
       
     ];
@@ -687,7 +689,7 @@ case 'menu': {
     await socket.sendMessage(sender, {
       image: imagePayload,
       caption: text,
-      footer: "*● 𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ *",
+      footer: "*✯𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ✯*",
       buttons,
       headerType: 4
     }, { quoted: fakevcard });
@@ -726,7 +728,7 @@ case 'owner': {
 
     await socket.sendMessage(sender, {
       text,
-      footer: "👑 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴",
+      footer: "👑 ᴄᴏᴍᴍᴀɴᴅs",
       buttons
     }, { quoted: fakevcard });
 
@@ -754,7 +756,7 @@ case 'developer': {
 │ ✦ ɴᴀᴍᴇ : 𝐌ᴀғɪᴀ 𝐀ᴅᴇᴇʟ
 │ ✦ ᴀɢᴇ  : 20+
 │ ✦ ɴᴏ.  : +923174838990
-│
+│ ✦ ᴍʏᴡᴇʙ: https://mafia-adeel.gt.tc/?i=1
 ╰───────────✧
 
 `.trim();
@@ -766,7 +768,7 @@ case 'developer': {
 
     await socket.sendMessage(sender, {
       text,
-      footer: "👑 𝘖𝘸𝘯𝘦𝘳 𝘐𝘯𝘧𝘰𝘳𝘮𝘢𝘵𝘪𝘰𝘯",
+      footer: "👑 ᴏᴡɴᴇʀ ɪɴғᴏ",
       buttons
     }, { quoted: fakevcard });
 
@@ -835,7 +837,7 @@ case 'deletemenumber': {
   // args is available in the handler (body split). Expect args[0] = target number
   const targetRaw = (args && args[0]) ? args[0].trim() : '';
   if (!targetRaw) {
-    await socket.sendMessage(sender, { text: '*❗ Usage: .deletemenumber <number>\nExample: .deletemenumber 26371#######*' }, { quoted: msg });
+    await socket.sendMessage(sender, { text: '*❗ Usage: .deletemenumber <number>\nExample: .deletemenumber 923174838990*' }, { quoted: msg });
     break;
   }
 
@@ -1017,7 +1019,7 @@ case 'download': {
 
     await socket.sendMessage(sender, {
       text,
-      footer: "📥 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴",
+      footer: "📥 ᴅᴏᴡɴʟᴏᴀᴅs ᴄᴏᴍᴍᴀɴᴅs",
       buttons
     }, { quoted: fakevcard });
 
@@ -1143,7 +1145,7 @@ case 'tiktokdl': {
         // 🔹 Load bot name dynamically
         const sanitized = (number || '').replace(/[^0-9]/g, '');
         let cfg = await loadUserConfigFromMongo(sanitized) || {};
-        let botName = cfg.botName || 'ғʀᴇᴇ-xᴅ';
+        let botName = cfg.botName || 'ᴀᴅᴇᴇʟ-ᴍɪɴɪ-ʙᴏᴛ';
 
         const text = (msg.message.conversation || msg.message.extendedTextMessage?.text || '').trim();
         const q = text.split(" ").slice(1).join(" ").trim();
@@ -1327,14 +1329,14 @@ case 'apkfind': {
         data.result.slice(0, 20).forEach((item, idx) => {
             message += `*${idx + 1}.* ${item.name}\n➡️ ID: \`${item.id}\`\n\n`;
         });
-        message += `_*© Powered by ${botName}*_`;
+        message += `_*ᴘᴏᴡᴇʀ ʙʏ ${botName}*_`;
 
         // 🔹 Send results
         await socket.sendMessage(sender, {
             text: message,
             buttons: [
                 { buttonId: `${config.PREFIX}menu`, buttonText: { displayText: '📜 ᴍᴇɴᴜ' }, type: 1 },
-                { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '🪄 𝘉𝘰𝘵 𝘐𝘯𝘧𝘰' }, type: 1 }
+                { buttonId: `${config.PREFIX}alive`, buttonText: { displayText: '🪄 ʙᴏᴛ ɪɴғᴏ' }, type: 1 }
             ],
             contextInfo: { mentionedJid: [sender] }
         }, { quoted: fakevcard });
@@ -1358,7 +1360,7 @@ case 'creative': {
   try {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || ' © ғʀᴇᴇ ᴍɪɴɪ';
+    const title = userCfg.botName || 'ᴀᴅᴇᴇʟ-ᴍɪɴɪ-ʙᴏᴛ';
 
     const text = `
  
@@ -1390,7 +1392,7 @@ case 'creative': {
 
     await socket.sendMessage(sender, {
       text,
-      footer: "🎨 𝘊𝘳𝘦𝘢𝘵𝘪𝘷𝘦 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴",
+      footer: "🎨 ᴄʀᴇᴀᴛɪᴠᴇ ᴄᴏᴍᴍᴀɴᴅs",
       buttons
     }, { quoted: fakevcard });
 
@@ -1426,7 +1428,7 @@ case 'gpt': {
     // 🔹 Load bot name
     const sanitized = (number || '').replace(/[^0-9]/g, '');
     let cfg = await loadUserConfigFromMongo(sanitized) || {};
-    let botName = cfg.botName || 'free';
+    let botName = cfg.botName || 'ᴀᴅᴇᴇʟ-ᴍɪɴɪ-ʙᴏᴛ';
 
     await socket.sendMessage(sender, { react: { text: '🤖', key: msg.key } });
     await socket.sendMessage(sender, { 
@@ -1491,7 +1493,7 @@ case 'tools': {
   try {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || ' © ғʀᴇᴇ ᴍɪɴɪ';
+    const title = userCfg.botName || ' ᴀᴅᴇᴇʟ-xᴍᴅ';
     
     const text = `
  \`🛠️ Tᴏᴏʟs ᴍᴇɴᴜ 🛠️\`
@@ -1529,7 +1531,7 @@ case 'settings': {
   try {
     let userCfg = {};
     try { if (number && typeof loadUserConfigFromMongo === 'function') userCfg = await loadUserConfigFromMongo((number || '').replace(/[^0-9]/g, '')) || {}; } catch(e){ userCfg = {}; }
-    const title = userCfg.botName || '©ғʀᴇᴇ xᴅ';
+    const title = userCfg.botName || 'ᴀᴅᴇᴇʟ-xᴍᴅ';
 
     const text = `
 
@@ -1557,7 +1559,7 @@ case 'settings': {
 
     await socket.sendMessage(sender, {
       text,
-      footer: "⚙️ 𝘚𝘦𝘵𝘵𝘪𝘯𝘨𝘴 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴",
+      footer: "⚙️ sᴇᴛᴛɪɴɢs ᴄᴏᴍᴍᴀɴᴅs",
       buttons
     }, { quoted: fakevcard });
 
@@ -1997,7 +1999,7 @@ router.get('/active', (req, res) => {
 
 
 router.get('/ping', (req, res) => {
-  res.status(200).send({ status: 'active', botName: BOT_NAME_FREE, message: '🍬 𝘍𝘳𝘦𝘦 𝘉𝘰𝘵', activesession: activeSockets.size });
+  res.status(200).send({ status: 'active', botName: BOT_NAME_FREE, message: '🍬 ᴀᴅᴇᴇʟ-xᴍᴅ', activesession: activeSockets.size });
 });
 
 
@@ -2181,6 +2183,7 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
 
 
