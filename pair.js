@@ -31,11 +31,11 @@ const BOT_NAME_FREE = 'ᗩᗪᗴᗴᒪ ᙭ᗰᗪ';
 const config = {
   AUTO_VIEW_STATUS: 'true',
   AUTO_LIKE_STATUS: 'true',
-  AUTO_RECORDING: 'true',
+  AUTO_RECORDING: 'false',
   AUTO_LIKE_EMOJI: ['🎈','👀','❤️‍🔥','💗','😩','☘️','🗣️','🌸'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BhemgSVZDHfIVMFOEgn3D4',
+  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/GZv3uvBme2zI1gQe5SiFnV?mode=gi_c',
   FREE_IMAGE: 'https://files.catbox.moe/1bho69.jpg',
   NEWSLETTER_JID: '120363407804667405@newsletter', // replace with your own newsletter its the main newsletter
   
@@ -81,7 +81,7 @@ const config = {
 
 // ---------------- MONGO SETUP ----------------
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://malvintech11_db_user:0SBgxRy7WsQZ1KTq@cluster0.xqgaovj.mongodb.net/?appName=Cluster0'; //we need to create a mongodb url soon
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://adeelsabqi7861_db_user:<db_password>@cluster0.wlvysda.mongodb.net/?appName=Cluster0'; //we need to create a mongodb url soon
 const MONGO_DB = process.env.MONGO_DB || 'ADEEL_Mini';
 
 let mongoClient, mongoDB;
@@ -2183,6 +2183,7 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
 
 
